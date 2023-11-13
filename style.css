@@ -42,12 +42,14 @@ div {
   }
 
   #green {
-    transition-property: rotate;
+    transition: transform 2s linear 1s;
+
+    /* transition-property: rotate;
     transition-duration: 2s;
-    transition-delay: 1s;
+    transition-delay: 1s; */
   }
   #green:hover {
-    rotate: 360deg;
+    transform: rotate(360deg);
     background-color: yellow;
   }
 
@@ -60,10 +62,6 @@ div {
   @keyframes expand {
     50% {
         width: 450px;
-    }
-
-    100% {
-        width: 150px;
     }
   }
 
@@ -100,10 +98,10 @@ div {
         transform: translateX(200px);
     }
     50% {
-        transform: translateX(200px) translateY(-200px);
+        transform: translateX(200px) translateY(-200px) scaleY(-1);
         
     }
     75% {
-        transform: translateX(200px) translateY(0);
+        transform: translateX(200px) translateY(0) scaleY(1);
     }
   }
